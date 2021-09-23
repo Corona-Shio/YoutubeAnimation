@@ -3,6 +3,11 @@
 activeDocument.suspendHistory("PNGの高速書き出しスクリプト", "main()");
 
 var folderPath;
+// 「選択したフォルダを対象にする」のチェックボックスのデフォルト
+var defaultOptionSelected = true;
+// 「ファイル名の頭に連番を振る」のチェックボックスのデフォルト
+var defaultOptionPrefix = true;
+
 
 function main() {
 
@@ -118,7 +123,8 @@ function setting(){
         ,padding+margin+btnMargin+okBtnHeight]
         , "実行", { name:"OK"});
 
-    uDlg.optionPrefix.value = true;
+    uDlg.optionSelected.value = defaultOptionSelected;
+    uDlg.optionPrefix.value = defaultOptionPrefix;
     uDlg.center();
     uDlg.show();
 }
