@@ -1,3 +1,5 @@
+// PhotoShop Script
+
 activeDocument.suspendHistory("PNGの高速書き出しスクリプト", "main()");
 
 var folderPath;
